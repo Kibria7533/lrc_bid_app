@@ -16,7 +16,7 @@ onc=(e)=>{
 }
 sub=e=>{
     e.preventDefault();
-   axios.post('http://127.0.0.1:8000/insert',this.state)
+   axios.post('https://asadt.herokuapp.com/insert',this.state)
    .then(res=>{
      
 

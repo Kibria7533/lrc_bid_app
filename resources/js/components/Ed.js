@@ -10,7 +10,7 @@ class Ed extends Component {
     }
     componentDidMount() {
         const id=this.props.match.params.id;
-        axios.get(`http://127.0.0.1:8000/edit/${id}`)
+        axios.get(`https://asadt.herokuapp.com/edit/${id}`)
             .then(response => {
                 console.log(response.data[0].name);
                 this.setState({ name: response.data[0].name ,id:response.data[0].id});
@@ -27,7 +27,7 @@ class Ed extends Component {
 
     sub=e=>{
         e.preventDefault();
-        axios.post('http://127.0.0.1:8000/editinsert',this.state)
+        axios.post('https://asadt.herokuapp.com/editinsert',this.state)
         .then(res=>{
         
      

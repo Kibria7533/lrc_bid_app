@@ -10,7 +10,7 @@ class Home extends Component {
         }
     }
     componentDidMount() {
-        axios.get('http://127.0.0.1:8000/show')
+        axios.get('https://asadt.herokuapp.com/show')
             .then(response => {
 
                 this.setState({ data: response.data });
@@ -21,7 +21,7 @@ class Home extends Component {
     }
     del=(e)=>{
         const id=e.target.value;
-        axios.delete(`http://127.0.0.1:8000/delete/${id}`)
+        axios.delete(`https://asadt.herokuapp.com/delete/${id}`)
         .then(res=>{
             const dt=this.state.data.filter(item=>item.id!=id);
             this.setState({data:dt});
